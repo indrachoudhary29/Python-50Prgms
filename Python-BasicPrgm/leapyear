@@ -1,0 +1,21 @@
+'''A leap year is a year where February has 29 days instead of 28.
+Rules for the question:
+If year divisible by 400 → ✅ Leap year
+Else if year divisible by 100 → ❌ Not leap year
+Else if year divisible by 4 → ✅ Leap year
+Otherwise → ❌ Not leap year'''
+
+def is_leap(year):
+    leap=False
+    if year%400==0:
+        leap=True
+    elif year%100==0:
+        leap=False
+    elif year%4==0:
+        leap=True
+    else:
+        leap=False
+    return leap
+year=int(input())
+print(is_leap(year))
+
